@@ -1,0 +1,885 @@
+.defaultTheme{
+    @headerleft:#53C7D2;//
+    @headerright:#ab9ee5;//
+    @isMain:#9055EF;
+    @bac_main:#2cbcc8;/*主色,弹框标题，分区内容标题 输入框搜索框下拉框输入状态*/
+    @bac_fu:#1dade2;/*辅色，导航文字，表格按钮文字*/
+    @tableborder:#efefef;/*表格边框及分割线*/
+    @tableth:#fafafa;/*表格头颜色*/
+    @tablecor: #666666;/*表格正文颜色*/
+    @tablehover:#f5f7fa;/*鼠标移入表格背景色*/
+    @btn:#2cbcc8;/*默认按钮背景色*/
+    @btnhover:#7ad0d8;/*按钮悬浮色*/
+    @head: #444444;/*表格标题颜色*/
+    @inputdef: #cccccc;/*输入框搜索框默认提示文字*/
+    @btncor: #ffffff;/*按钮文字颜色*/
+    @btnwenhover:#70c8e8;/*文字按钮移入色*/
+    @bac_menu:#5d717c;/*菜单背景色*/
+    @cor_menu:#dfe9ef;/*菜单文字*/
+    @menuhover:#708993;/*菜单选中*/
+    @menuson:#4f6069;/*二级菜单*/
+    @border:#dcdfe6;/*默认边框色 输入框搜索框下拉框默认状态*/
+    @wenjian:#fabd02;//文件夹
+    @bg_B2FFFF:#B2FFFF;//预约看板遮罩
+    @bg_tag:#f4f4f4; //标签默认状态 背景色
+    @bg_tag_hover:#ecf6ff;//标签 hover状态 背景色
+    @border_tag_hover:#cae5ff;//标签 hover状态 边框
+    @bg_switch_close:#dcdfe6;//switch开关关闭背景色
+    @iconbicor:#f50; /*字体图标必填颜色*/
+    @Checked:#2cbcc8;/*多选字体图标颜色*/
+    @unchecked:#dcdfe6;/*取消选中字体图标颜色*/
+    @btn_none:#999999;/*取消按钮字体颜色*/
+    @star_selected:#ff962f;/*五星选中*/
+    @Arrow:#999999;/*右下箭头*/
+    @file:#1dade2;/*文件夹下的小盒子*/
+    @product:#4db0e8;/*产品分类*/
+    @Fork:#999;/*叉号*/
+    @ForkHover:#666;
+    @warning:#D0021B;
+    .Tablesdf{
+        margin: 0 auto;
+        border-top: 1px solid @tableborder;
+        border-left: 1px solid @tableborder;
+        width: 100%;
+        thead {
+            background: @tableth;
+        }
+        tbody tr:hover>td{
+            background-color: @tablehover;
+        }
+        td,th{
+            height: 30px;
+            border-bottom: 1px solid @tableborder;
+            border-right: 1px solid @tableborder;
+            max-width: 120px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        td{
+            font-size: 12px;
+            color: @tablecor;
+            background: @btncor;
+            // padding:0 4px;
+        }
+        th{
+            background: @tableth;
+            font-weight: normal;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+    .NoDatas{
+        border: 1px solid   @tableborder;
+    }
+    .el-range-editor.is-active, 
+    .el-range-editor.is-active:hover,
+    textarea:focus,
+    input:focus {
+        border: solid 1px @bac_main;
+    }
+    
+    .el-range-editor--mini .el-range-input:focus{
+        border: solid 1px #fff;
+    }
+    input[readonly]:focus {
+        border: solid 1px @border;
+    }
+    input.waringborder{
+        border: solid 1px #FF5500;
+    }
+    // input的样式
+    textarea,
+    input{
+      border: solid 1px @border;
+    }
+    // 按钮样式
+    button.purple {
+        font-size: 1rem !important;
+        text-align: center;
+        cursor: pointer;
+        background: transparent;
+        vertical-align: middle;
+        padding: 0 10px;
+        border: 1px solid transparent;
+        line-height: 22px !important;
+        height: 24px;
+        background: @bac_main;
+        color: #fff;
+        border-radius: 2px;
+        .icon{
+            margin-right:6px;
+            vertical-align: baseline;
+        }
+        .iconadd::before{
+            content: "\e752";
+        }
+        .Search::before{
+            content: "\e632";
+        }
+        .Reset::before{
+            content: "\e617";
+        }
+        .Role::before{
+            content: "\e66c";
+        }
+        .Upload::before{
+            content: "\e6ad";
+        }
+        .Modify::before{
+            content: "\e6cf";
+        }
+        .Roof::before{
+            content: "\e64e";
+        }
+        .Delete::before{
+            content: "\e659";
+        }
+        .icondownload::before {
+            content: "\e63a";
+          }
+    }
+    button.purple.ismargin{
+        padding: 0 6px;
+    }
+    button.purple:hover{
+        background: @btnhover;
+    }
+     /* 无背景色 */
+    button.purple.None {
+        border: 1px solid @border;
+        color:  @btn_none;
+        background: transparent;
+    }
+    button.purple.None:hover {
+        border: 1px solid @btn;
+        color: @btn;
+    }
+    button.purple.Btn {
+        border-radius: 0;
+        height: initial !important;
+        color: @bac_fu !important;
+        line-height: 3.333333rem;
+        background: none !important;
+        border: none !important;
+    }
+    button.purple.Btndisabled {
+        border-radius: 0;
+        height: initial !important;
+        color: #dcdfe6 !important;
+        line-height: 3.333333rem;
+        background: none !important;
+        border: none !important;
+    }
+    button.purple.Btn:hover{
+        color: @btnwenhover;
+    }
+    // 搜索栏样式
+    .search-wraps{
+        ul{
+            zoom: 1;
+        }
+        ul:after {
+            content: " ";
+            display: block;
+            clear: both;
+          }
+        li{
+            padding-bottom: 12px;
+            float:left;
+            padding-right: 12px;
+            height: 40px;
+            button{
+                margin-left:12px;
+            }
+           
+        }
+    }
+    // 表格样式
+    .el-table{
+        color:  @head;
+        .el-table__fixed, .el-table__fixed-right{
+            // box-shadow: none;
+        }
+        thead{
+            color:  @head;
+            font-style: normal;
+        }
+        th{
+            background: @tableth;
+            color:  @head;
+            font-weight: 400;
+        }
+        th,td{
+            padding: 0;
+            height: 30px;
+            text-align: center;
+            // .cell{
+            //     overflow: hidden;
+            //     text-overflow: ellipsis;
+            //     white-space: nowrap;
+            // }
+            .rtext{
+                text-align: left;
+            }
+        }
+        tbody .cell{
+            color: @tablecor;
+            font-size: 12px;
+            word-break: keep-all;
+            white-space: nowrap;
+            .btncor{
+                color: @bac_fu;
+                cursor: pointer;
+            }
+            
+        }
+    }
+    .el-cascader.is-disabled{
+        .el-cascader__label{
+            padding:0;
+        }
+        .el-input .el-input__inner{
+            border:none;
+            background-color:transparent;
+        }
+        .el-cascader__label{
+            color:#666;
+        }
+        .el-input__suffix{
+            display:none;
+        }
+    }
+    .el-cascader-menu__item:focus:not(:active){
+        background-color: transparent!important;
+      }
+    .tableH .el-table {
+        th,td{
+            height:40px;
+        }
+    }
+    // 日期
+    .el-picker-panel__icon-btn:hover{
+        color:@bac_main
+    }
+    .el-picker-panel__shortcut:hover {
+        color: @bac_main;
+    }
+    .el-date-picker__header-label.active, .el-date-picker__header-label:hover {
+        color: @bac_main;
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+        background-color: @Checked!important;
+        border-color: @Checked !important;
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner{
+        border-color: @Checked !important;
+    }
+    .el-checkbox__inner:hover {
+        border-color: @Checked !important;
+    }
+    .el-checkbox__input.is-focus .el-checkbox__inner{
+        border-color: @Checked !important;
+    }
+    .el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td{
+        background-color: @tablehover;
+    }
+    .el-table--border td, .el-table--border th{
+        border-right: 1px solid @tableborder;
+        border-bottom: 1px solid @tableborder;
+    }
+    .Selecttem .el-select .el-input.is-focus .el-input__inner {
+        border-color: @bac_main;
+    }
+    // 下拉框样式
+    .el-select-dropdown__item.selected{
+        color:@bac_main;
+    }
+    .el-select .el-input.is-focus .el-input__inner {
+        border-color: @bac_main;
+    }
+    .el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+        color: @bac_main;
+    }
+    .el-cascader-menu__item{
+        padding-right: 30px;
+    }
+     .el-input{
+        .el-input__inner{
+            border-color: @border;
+            box-shadow: none;
+        }
+        .el-input__inner:focus{
+            border: 1px solid @bac_main;
+        }
+     } 
+    .waringborder .el-input .el-input__inner{
+        border-color: #FF5500;
+    }
+    .el-cascader-menu .el-cascader-menu__item.is-active {
+        color: @bac_main;
+    }
+    .el-radio__label{
+        font-size: 12px;
+    }
+    .el-pager li:hover{
+        color: @bac_main;
+    }
+    .el-input__inner{
+        border-radius: 2px;
+    }
+    .el-input-number__decrease, .el-input-number__increase{
+        top: 2px;
+        height: 24px;
+    }
+    .el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled), .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled){
+        border-color: #2cbcc8;
+    }
+    .el-date-editor .el-range-input, .el-date-editor .el-range-separator{
+        // line-height: 100% !important;
+    }
+    .el-cascader--small,.el-cascader__label {
+        line-height: 26px;
+        height: 26px;
+      }
+      .el-message-box__headerbtn .el-message-box__close{
+        color: #999;
+        font-size: 14px;
+      }
+      .el-message-box__headerbtn:focus .el-message-box__close, .el-message-box__headerbtn:hover .el-message-box__close{
+        color: #666;
+      }
+      .el-cascader{
+          line-height: 26px;
+      }
+    
+    .Nav {
+        background: @bac_menu;
+        .personalInfo{
+            background: @headerleft;
+        }
+        .el-menu{
+            background: @bac_menu;
+            color: @cor_menu;
+        }
+        .is-opened{
+            .el-submenu__title{
+                color: @bac_main;
+            }
+            .el-submenu__title i{
+                color: @bac_main;
+            }
+        }
+        .el-submenu__title{
+            color: @cor_menu;
+        }
+        .el-submenu__title i{
+            color: @cor_menu;
+        }
+        .el-submenu__title:hover,.el-submenu__title:focus{
+            background: @bac_menu;
+            color: @bac_main;
+            i{
+                color: @bac_main;
+            }
+        }
+        
+        .el-submenu .el-menu .el_Nav{
+            background: @menuson;
+        }
+        .el-menu-item:focus,.el-menu-item:hover,.el-menu-item.is-active{
+            background: @menuhover;
+            color: @bac_main;
+            border-left: 5px solid @bac_main;
+            i{
+                color: @bac_main;
+            }
+        }
+         .el-menu-item{
+            color: @cor_menu;
+        }
+    }
+    .HeaderComponent{
+        background:linear-gradient(left,@headerleft 25%,@headerright);
+        background:-moz-linear-gradient(left,@headerleft 25%,@headerright);
+        background:-webkit-linear-gradient(left,@headerleft 25%,@headerright);
+        background:-o-linear-gradient(left,@headerleft 25%,@headerright);
+        background:-ms-linear-gradient(left,@headerleft 25%,@headerright);
+    }
+    .headerNav{
+      color: @bac_fu;
+    }
+    // 近期生日客户 客户列表
+    .customer .isMain,
+    .recent_birthday .isMain{
+        color:  @isMain
+    }
+    // 组织结构
+    .structure{
+        .iconF::before{
+            content: "\e621";
+            color: @wenjian;
+        }
+        .iconN::before{
+            content: "\e783";
+            color: @bac_fu;
+        }
+        .OnHover span.operation{
+            text-align: left;
+            padding-left: 53px;
+        }
+        .table {
+            border-bottom: 1px solid @tableborder;
+            border-top: 1px solid @tableborder;
+            border-right: 1px solid @tableborder;
+            border-collapse: separate;
+            border-left: 0;
+            font-size: 0;
+            span{
+                border-left: 1px solid @tableborder;
+            }
+        }
+        .OnHover{
+            border-bottom: 1px solid  @tableborder;
+            border-right: 1px solid  @tableborder;
+            font-size: 0;
+            color: @tablecor;
+            .firstSpan{
+                text-align: left;
+                padding-left:30px; 
+                position: relative;
+            }
+            span {
+                vertical-align: top;
+                font-size: 12px;
+                display: inline-block;
+                text-align: center;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                border-left: 1px solid @tableborder;
+            }
+        }
+        .OnHover:hover{
+            background: @tablehover;
+        }
+        .OnHover.Child{
+            border-left: 1px solid @tableborder;
+        }
+        .OnHeader{
+            background: @tableth;
+            color:  @head;
+        }
+    }
+    .borderLeft {
+        display: inline-block;
+        width: 2px;
+        height: 1.166667rem;
+        background: @bac_fu;
+        position: relative;
+        top: 1px;
+        left: 0;
+      }
+    // 排班分组
+    .Grounp {
+        .left li:hover{
+            border-color: @btn;
+            color: @btn;
+        }
+        .left li.active{
+            border: 1px solid @btn;
+            background: @btn;
+            color: #fff;
+        }
+        .left li{
+            cursor: pointer;
+            border: 1px solid @border;
+            border-bottom: none;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .left li:last-child{
+            border-bottom: 1px solid @border;
+        }
+    }
+    // 排班管理
+    .Arrange {
+        .classes li{
+            float: left;
+            border: 1px solid @tableborder;
+            width: 100px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .classes li.active{
+            border: 1px solid @btn;
+            color: @btn;
+        }
+    }
+
+    //预约看板
+    .app_grade{ 
+        .c_content{
+            background-color: @bg_B2FFFF;
+            border-bottom:1px solid  @tableborder;
+        }
+    }
+
+    //预约添加
+    .staff_time .text_warning{
+        color:@iconbicor
+    }
+    
+    //model header
+    .x_model_header{
+        border-bottom:1px solid @tableborder;
+        color:@bac_menu
+    }
+
+    //添加
+    .update_content{
+        >ul{
+            border-top:1px solid @tableborder;
+            border-left:1px solid @tableborder;
+            >li{
+                border-right:1px solid @tableborder;
+                border-bottom:1px solid @tableborder;
+                >.update_tit{
+                    border-right:1px solid @tableborder;
+                    background-color:@tableth;
+                }
+            }
+        }
+        
+    }
+    .customer_detail .customer_msg{
+        color: @bac_main;
+    }
+    .customer_detail .detail_left_bottom li .pointer{
+        color: @bac_main ;
+    }
+
+    // tab element
+    .el-tabs--border-card>.el-tabs__header .el-tabs__item:hover,
+    .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
+        color:@bac_main;
+    }
+
+    .select_app_model .el-tabs--border-card{
+        border-bottom:1px solid @tableborder
+    }
+    //element tab页
+    .el-tabs__item.is-active {
+        color: @bac_main;
+    }
+    .el-tabs__active-bar{
+        background-color:  @bac_main
+    }
+    .el-tabs__item:hover{
+        color: @bac_main;
+    }
+
+    //element dropdown
+    .el-dropdown {
+        color: @bac_fu;
+    }
+    
+    //element 日期
+    .el-date-table td.end-date span, .el-date-table td.start-date span{
+        background-color: @bac_main;
+    }
+    .el-date-table td.start-date.today  span{
+        color:#fff;
+    }
+    .el-date-table td.available:hover,
+    .el-date-table td.today span
+    // ,
+    // .el-date-table td.today span
+    {
+        color:@bac_main;
+    }
+    // tag 标签
+    .x_tags:hover {
+        background-color: @bg_tag_hover;
+        border: 1px solid @border_tag_hover;
+        color:@bac_fu;
+    }
+    .x_tags {
+        border: 1px solid @tableborder;
+        background-color: @tableth;
+        color:@Arrow
+      }
+      
+    .x_unchecked::before {
+        color: @border
+    }
+      
+    .x_checked::before {
+        color: @Checked;
+    }
+    .data_import .x_waring{
+        color:@warning;
+    }
+
+    // 添加退款
+    .add_header {
+        color: @bac_main;
+        border-bottom-color:#fff;
+      }
+      .add_refund .basic_information td:nth-child(2n-1) {
+        background-color: @tableth;
+      }
+      .x_remind{
+          color:@btn_none
+      }
+      .all_money{
+          color:@star_selected
+      }
+
+    //   element switch开关
+    .el-switch.is-checked .el-switch__core{
+        border-color: @bac_main;
+        background-color: @bac_main;
+    }
+    .el-switch__core{
+        border: 1px solid @bg_switch_close;
+        background: @bg_switch_close;
+    }
+
+    //element 单选
+    .el-radio__input.is-checked .el-radio__inner{
+        border-color: @Checked;
+        background: @Checked;
+    }
+    .el-radio__input.is-checked+.el-radio__label{
+        color: @Checked;
+    }
+
+    //element 分页
+    .el-pager li.active{
+        color:@bac_main;
+    }
+
+    //element 多选
+    .el-checkbox__input.is-checked+.el-checkbox__label{
+        color:@bac_main;
+    }
+    //element 单选
+    .el-radio__inner:hover {
+        border-color: @bac_main;
+    }
+    // 图片上传
+    // .upload:hover{
+    //     background-color: @btnhover;
+    // }
+    // .upload{
+    //     background-color: @bac_main;        
+    // }
+
+    //
+    .x_border_error{
+        border-bottom-color: @iconbicor
+    }
+    .x_icon_quxiao{
+        color:  @bg_switch_close;
+    }
+
+
+    .signature_area{
+        border:1px solid @border;
+    }
+
+    //
+    .x_sure{
+        border:1px solid @tableborder;
+    }
+    .x_sure_footer,
+    .x_sure_header{
+        border-bottom:1px solid @tableborder;
+        background-color:  @tableth
+    }
+    .x_xing{
+        color:@iconbicor;
+    }
+    .flowHistId_refund p.F2 ,
+    .flowHistId_refund .icon.F2::before,
+    .x_header_title{
+        color:@bac_main
+    }
+    .select_prod {
+        .el-button--primary{
+            border-color: @bac_main
+        }
+        .el-transfer-panel__item:hover{
+            color: @bac_main
+        }
+        .el-transfer__button.is-disabled, .el-transfer__button.is-disabled:hover {
+            border: 1px solid #dcdfe6;
+            background-color: #f5f7fa;
+            color: #c0c4cc;
+        }
+        .el-transfer__button {
+            background-color: @bac_main
+        }
+    }
+  
+    .customer_exist .x_warning{
+        color:@iconbicor
+    }
+    //客户详情
+    .customer_detail{
+
+        .CloseIcon::before {
+        color: @bac_main;
+        }
+        .customer_tag .tagSelected li{
+            border:1px solid @bac_main;
+        }
+        .icon-bianji::before {
+            color: @bac_main;
+        }
+    } 
+  
+    //日期选中颜色
+    .el-date-table td.current:not(.disabled) span {
+        background-color: @bac_main;
+        color: #fff;
+    }
+    //字体图标
+    .NoEyes::before{
+        content: "\e7d3";
+        cursor: pointer;
+        font-size: 1.166667rem;
+    }
+    .OffEyes::before{
+        content: "\e7d2";
+        font-size: 1.166667rem;
+        color: @Arrow;
+    }
+    .waring::before {
+        content: "\e69b";
+        color: @iconbicor;
+    }
+    .sign::before {
+        content: "\E62D";
+        color: @Checked;
+    }
+    .unchecked::before {
+        content: "\E68c";
+        color: @unchecked;
+        font-size: 1.166667rem;
+        cursor: pointer;
+    }
+    .checked::before {
+        content: "\E67e";
+        color: @Checked;
+        font-size: 1.166667rem;
+    }
+    .indeterminate::before {
+        content: "\ebce";
+        color: @Checked;
+        font-size: 1.166667rem;
+    }
+    .unradio::before {
+        content: "\E7d4";
+        color: @unchecked;
+        font-size: 1.166667rem;
+    }
+    .radio::before {
+        content: "\E65f";
+        color: @Checked;
+        font-size: 1.166667rem;
+    }
+    .Arrow::before {
+        content: "\e63c";
+        color: @Arrow;
+        font-size: 1.166667rem;
+    }
+    .UPDown::before {
+        content: "\e605";
+        color: @Arrow;
+        font-size: 1.166667rem;
+    }
+    .RArrow::before {
+        content: "\e637";
+        color: @inputdef;
+    }
+    .Folder::before {
+        content: "\E68f";    
+        color:@wenjian;
+    }
+    .File::before{
+        content: "\E783";  
+        color: @file;
+    }
+    .Addto::before{
+        content: "\e614";
+        color:@inputdef;
+        cursor:pointer; 
+        margin-right: -8px;
+    }
+    .AddTo::before{
+        content: "\e752";
+        color:@file;
+        cursor:pointer; 
+        margin-right: -8px;
+    }
+    .Edit::before{
+        content: "\E6cf";
+        color: @file; 
+    }
+    .DeleTe::before{
+        content: "\E659";
+        color:@file; 
+    }
+    .Top::before{
+        content: "\E64e";
+        color:@file;
+    }
+    .Fork::before{
+        content: "\e61a";
+        color:@Fork;
+        cursor:pointer; 
+    }
+    .Fork:hover::before{
+        color:@ForkHover;
+    }
+    .Shrink::before{
+        content: '\e656';
+        color: @Fork;
+        font-size: 1.166667rem;
+        cursor: pointer;
+    }
+    .ZoomIn::before{
+        content: '\e647';
+        color: @Fork;
+        font-size: 1.333333rem;
+        cursor: pointer;
+    }
+    .rotate::before{
+        content: '\e75b';
+        color: @Fork;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .Addstaff{
+        .el-date-editor.el-input, .el-date-editor.el-input__inner {
+            width: 160px;
+        }
+    }
+    .ModSta{
+        .el-date-editor.el-input, .el-date-editor.el-input__inner {
+            width: 160px;
+        }
+    }
+.second{
+    @primary-color: #20A0FF;
+}
+
+}
